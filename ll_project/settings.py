@@ -22,15 +22,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-rz21jf*b%)3cft1b=lbnjb)3_mkfv==mtu2r)l!d2e!zrn^aa$'
+# コメントアウト SECRET_KEY = 'django-insecure-rz21jf*b%)3cft1b=lbnjb)3_mkfv==mtu2r)l!d2e!zrn^aa$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
+# コメントアウト DEBUG = True
 
-# ALLOWED_HOSTS = []
+# コメントアウト ALLOWED_HOSTS = []
 
 # DJANGO_ENV 環境変数で .env ファイルを切り替え
 # デフォルトは 'dev' => サーバーにアップ時は、'prod'
+# 追記 ↓
 DJANGO_ENV = os.getenv('DJANGO_ENV', 'dev')  
 
 env_file = f'.env.{DJANGO_ENV}'  # 例: .env.dev または .env.prod
@@ -54,8 +55,7 @@ SECURE_HSTS_SECONDS = env.int('SECURE_HSTS_SECONDS', default=0)
 SECURE_HSTS_INCLUDE_SUBDOMAINS = env.bool(
     'SECURE_HSTS_INCLUDE_SUBDOMAINS', default=False)
 SECURE_HSTS_PRELOAD = env.bool('SECURE_HSTS_PRELOAD', default=False)
-
-
+# 追記 ↑
 
 # Application definition
 

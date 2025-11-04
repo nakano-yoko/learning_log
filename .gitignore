@@ -3,11 +3,9 @@ __pycache__/
 *.py[cod]
 venv/
 db.sqlite3
-.env
+.env*
 staticfiles/
 media/
 *.log
 cleanup_django.bat
 setup_django_env.bat
-.env.dev
-.env.prod
